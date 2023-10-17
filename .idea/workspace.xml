@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6c0a31c-8994-419b-9986-9a9b7e838de3" name="Default Changelist" comment="" />
+    <list default="true" id="d6c0a31c-8994-419b-9986-9a9b7e838de3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CreateDatabase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EigenfaceCore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +16,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="8c62fe27-17a7-41ab-ab3d-32b3bd025234">
     <option name="files">
@@ -21,6 +30,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2WqoBz8rx40ZjGreFHN4UVFDm0W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/TestDatabase" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -55,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1697469339331</updated>
       <workItem from="1697469340497" duration="1050000" />
-      <workItem from="1697520087716" duration="6115000" />
+      <workItem from="1697520087716" duration="7269000" />
+      <workItem from="1697550243203" duration="196000" />
     </task>
     <servers />
   </component>
@@ -88,9 +100,9 @@
     </state>
     <state x="270" y="50" key="SettingsEditor/0.0.1536.816/1920.-219.1536.816@0.0.1536.816" timestamp="1697469744193" />
     <state x="2190" y="-169" key="SettingsEditor/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697521567442" />
-    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog" timestamp="1697520117840">
+    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog" timestamp="1697550242886">
       <screen x="1920" y="-219" width="1536" height="816" />
     </state>
-    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697520117840" />
+    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697550242886" />
   </component>
 </project>
