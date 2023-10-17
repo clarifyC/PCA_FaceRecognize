@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6c0a31c-8994-419b-9986-9a9b7e838de3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="8c62fe27-17a7-41ab-ab3d-32b3bd025234">
+    <option name="files">
+      <option value="example.ipynb" />
+    </option>
+  </component>
+  <component name="ProjectId" id="2WqoBz8rx40ZjGreFHN4UVFDm0W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TestDatabase" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pycharm files\基于PCA的人脸识别\TestDatabase" />
+      <recent name="E:\pycharm files\基于PCA的人脸识别\TrainDatabase" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6c0a31c-8994-419b-9986-9a9b7e838de3" name="Default Changelist" comment="" />
+      <created>1697469339331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697469339331</updated>
+      <workItem from="1697469340497" duration="1050000" />
+      <workItem from="1697520087716" duration="6115000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2469" y="-56" key="FileChooserDialogImpl" timestamp="1697521513788">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state x="2469" y="-56" key="FileChooserDialogImpl/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697521513788" />
+    <state width="466" height="688" key="GridCell.Tab.0.bottom" timestamp="1697523333793">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state width="466" height="688" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697523333793" />
+    <state width="466" height="688" key="GridCell.Tab.0.center" timestamp="1697523333793">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state width="466" height="688" key="GridCell.Tab.0.center/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697523333793" />
+    <state width="466" height="688" key="GridCell.Tab.0.left" timestamp="1697523333793">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state width="466" height="688" key="GridCell.Tab.0.left/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697523333793" />
+    <state width="466" height="688" key="GridCell.Tab.0.right" timestamp="1697523333793">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state width="466" height="688" key="GridCell.Tab.0.right/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697523333793" />
+    <state x="2190" y="-169" key="SettingsEditor" timestamp="1697521567442">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state x="270" y="50" key="SettingsEditor/0.0.1536.816/1920.-219.1536.816@0.0.1536.816" timestamp="1697469744193" />
+    <state x="2190" y="-169" key="SettingsEditor/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697521567442" />
+    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog" timestamp="1697520117840">
+      <screen x="1920" y="-219" width="1536" height="816" />
+    </state>
+    <state x="2369" y="13" key="com.intellij.ide.util.TipDialog/0.0.1536.816/1920.-219.1536.816@1920.-219.1536.816" timestamp="1697520117840" />
+  </component>
+</project>
