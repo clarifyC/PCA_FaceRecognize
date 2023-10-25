@@ -2,11 +2,9 @@ import numpy as np
 import os
 from PIL import Image
 
-homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
-
 def CreateDatabase(TrainDatabase):
     ############# File management
-    TrainFiles = os.listdir(homePath+TrainDatabase)
+    TrainFiles = os.listdir(TrainDatabase)
     Train_Number = 0;
     # 统计训练图片数量
     for i in range(len(TrainFiles)):
@@ -15,7 +13,7 @@ def CreateDatabase(TrainDatabase):
     T = []
     # 按顺序读取文件
     for i in range(1,Train_Number+1):
-        str_ = homePath+ TrainDatabase + str(i) + ".jpg"
+        str_ = TrainDatabase + str(i) + ".jpg"
         image = Image.open(str_)
         img = list(image.getdata())
         T.append(img)

@@ -1,46 +1,26 @@
-from CreateDatabase import CreateDatabase
-from Recognition import Recognition
-from EigenfaceCore import EigenfaceCore
 from PIL import Image
 
+from CreateDatabase import CreateDatabase
+from EigenfaceCore import EigenfaceCore
+from Recognition import Recognition
 
-def main():
 homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
+TrainDatabase = r"TrainDatabase\\"
+T = CreateDatabase(homePath+TrainDatabase)
+m,A,Eigenfaces = EigenfaceCore(T)
+
+# 输入测试图片
 TestImage = input('Enter test image name (a number between 1 to 10): ')
-TestImage = 'TestDatabase/' + TestImage + '.jpg'
-image = Image.open(homePath+TestImage)
-img = list(image.getdata())
+TestImage = 'TestDatabase\\' + TestImage + '.jpg'
+OutputName=Recognition(homePath+TestImage, m, A, Eigenfaces)
 
-T = CreateDatabase('TrainDatabase')
-m, A, eigenfaces = EigenfaceCore(T)
-output_name = Recognition(TestImage, m, A, eigenfaces)
+print("Matched image is:",str(OutputName)+".jpg")
 
-selected_image_path = '/data/Disk_A/biancongcong/test/Face/TrainDatabase/' + output_name
-print(selected_image_path)
-selected_image = Image.open(selected_image_path)
+# 绘制测试图片
+image_test = Image.open(homePath+TestImage)
+image_test.show()
 
-test_image = Image.open(TestImage)
-test_image.show()
-selected_image.show()
-
-print('Matched image is:', output_name)
-
-    # test_image_name = input('Enter test image name (a number between 1 to 10): ')
-    # test_image_path = 'TestDatabase/' + test_image_name + '.jpg'
-    # im = cv2.imread(test_image_path)
-    # T= CreateDatabase('TrainDatabase')
-    # m, centered_data, eigenfaces = EigenfaceCore(T)
-    # # print(m,'data', centered_data,'face', eigenfaces)
-    # output_name = Recognition(test_image_path, m, centered_data, eigenfaces)
-    #
-    # selected_image_path = 'TrainDatabase/' + output_name
-    # selected_image = cv2.imread(selected_image_path)
-    #
-    # cv2.imshow('Test Image', im)
-    # cv2.imshow('Equivalent Image', selected_image)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
-    # print('Matched image is:', output_name)
-
-if __name__ == '__main__':
-    main()
+# 绘制匹配到的图片
+SelectedImage = homePath + r"TrainDatabase\\" +str(OutputName) + ".jpg"
+image_select = Image.open(SelectedImage)
+image_select.show()

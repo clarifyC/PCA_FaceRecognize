@@ -1,13 +1,13 @@
 import numpy as np
 from PIL import Image
 from sklearn.metrics import pairwise_distances
-homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
+
 def Recognition(TestImage, m, A, eigenfaces):
     Train_Number = eigenfaces.shape[1]
     # 将二十张训练图（centered image）都映射到19维的特征空间中
     ProjectedImages = np.matmul(eigenfaces.T, A)
     # 读取测试图片
-    image = Image.open(homePath + TestImage)
+    image = Image.open(TestImage)
     InImage = np.array(image.getdata()).reshape(-1, 1)
     # 归一化/中心化
     Difference = InImage - m
