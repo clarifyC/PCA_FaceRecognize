@@ -2,27 +2,28 @@ from CreateDatabase import CreateDatabase
 from Recognition import Recognition
 from EigenfaceCore import EigenfaceCore
 from PIL import Image
-import cv2
+
 
 def main():
+homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
+TestImage = input('Enter test image name (a number between 1 to 10): ')
+TestImage = 'TestDatabase/' + TestImage + '.jpg'
+image = Image.open(homePath+TestImage)
+img = list(image.getdata())
 
-    test_image_name = input('Enter test image name (a number between 1 to 10): ')
+T = CreateDatabase('TrainDatabase')
+m, A, eigenfaces = EigenfaceCore(T)
+output_name = Recognition(TestImage, m, A, eigenfaces)
 
-    test_image_path = 'TestDatabase/' + test_image_name + '.jpg'
+selected_image_path = '/data/Disk_A/biancongcong/test/Face/TrainDatabase/' + output_name
+print(selected_image_path)
+selected_image = Image.open(selected_image_path)
 
-    T = CreateDatabase('TrainDatabase')
-    m, centered_data, eigenfaces = EigenfaceCore(T)
-    output_name = Recognition(test_image_path, m, centered_data, eigenfaces)
+test_image = Image.open(TestImage)
+test_image.show()
+selected_image.show()
 
-    selected_image_path = '/data/Disk_A/biancongcong/test/Face/TrainDatabase/' + output_name
-    print(selected_image_path)
-    selected_image = Image.open(selected_image_path)
-
-    test_image = Image.open(test_image_path)
-    test_image.show()
-    selected_image.show()
-
-    print('Matched image is:', output_name)
+print('Matched image is:', output_name)
 
     # test_image_name = input('Enter test image name (a number between 1 to 10): ')
     # test_image_path = 'TestDatabase/' + test_image_name + '.jpg'

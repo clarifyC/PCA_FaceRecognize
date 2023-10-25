@@ -7,15 +7,17 @@ homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
 def CreateDatabase(TrainDatabase):
     ############# File management
     TrainFiles = os.listdir(homePath+TrainDatabase)
-    ############# Construction of 2D matrix from 1D image vectors
+    Train_Number = 0;
+    # 统计训练图片数量
+    for i in range(len(TrainFiles)):
+        if TrainFiles[i]!='Thumbs.db':
+            Train_Number = Train_Number + 1
     T = []
-    for i in TrainFiles:
-        if i!='Thumbs.db':
-            # Train_Number = Train_Number + 1 # Number of all images in the training database
-            str_ = homePath+ TrainDatabase + i
-            image = Image.open(str_)
-            img = list(image.getdata())
-            T.append(img)
+    # 按顺序读取文件
+    for i in range(1,Train_Number+1):
+        str_ = homePath+ TrainDatabase + str(i) + ".jpg"
+        image = Image.open(str_)
+        img = list(image.getdata())
+        T.append(img)
     T = np.array(T).T
-    # print(T)
     return T

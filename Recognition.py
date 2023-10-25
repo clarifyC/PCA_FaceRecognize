@@ -1,55 +1,26 @@
-import cv2
 import numpy as np
 from PIL import Image
+from sklearn.metrics import pairwise_distances
+homePath = r'E:\pycharm files\基于PCA的人脸识别\\'
+def Recognition(TestImage, m, A, eigenfaces):
+    Train_Number = eigenfaces.shape[1]
+    # 将二十张训练图（centered image）都映射到19维的特征空间中
+    ProjectedImages = np.matmul(eigenfaces.T, A)
+    # 读取测试图片
+    image = Image.open(homePath + TestImage)
+    InImage = np.array(image.getdata()).reshape(-1, 1)
+    # 归一化/中心化
+    Difference = InImage - m
 
-# def Recogntion(TestImage,m,A,Eigenfaces):
-#     ProjectedImages = []
-#     Train_Number =  Eigenfaces.shape[1]
-#     for i in range(Train_Number):
-#         temp =  Eigenfaces.T.dot(A[:,i])
-#         ProjectedImages.append(temp)
-#     InputImage=cv2.imread(TestImage)
-#     temp = InputImage[:,:,0]
-#     irow,icol = temp.shape
-#     InImage = temp.reshape(irow * icol, 1)
-#     Difference = np.double(InImage) - m
-#     ProjectedTestImage = Eigenfaces.T
-#     Euc_dist = []
-#     for i in range(Train_Number):
-#         q = ProjectedImages[i]
-#         print(type(q))
-#         q=q.reshape(19,1)
-#         print(q.shape)
-#         temp = np.linalg.norm(ProjectedTestImage - q) ** 2
-#         Euc_dist.append(temp)
-#
-#     Euc_dist_min = min(Euc_dist)
-#     Recognized_index = np.argmin(Euc_dist)
-#     OutputName = str(Recognized_index) + '.jpg'
-#
-#     return OutputName
-#
+    # 将测试图片（centered image）映射到19维的特征空间中
+    ProjectedTestImage = np.matmul(eigenfaces.T, Difference)
 
-
-def Recognition(test_image, m, A, Eigenfaces):
-    ProjectedImages = []
-    Train_Number = Eigenfaces.shape[1]
-    for i in range(Train_Number):
-        temp = Eigenfaces.T.dot(A[:,i])
-        ProjectedImages.append(temp)
-    InputImage = Image.open(test_image).convert('L')
-    temp = np.array(InputImage)
-    irow, icol = temp.shape
-    InImage = temp.reshape(irow*icol, 1)
-    Difference = np.double(InImage) - m
-    ProjectedTestImage = Eigenfaces.T
+    # 计算测试特征图到每一张训练特征图欧氏距离
     Euc_dist = []
     for i in range(Train_Number):
-        q = ProjectedImages[i].reshape(-1, 1)
-        temp = np.linalg.norm(ProjectedTestImage - q)**2
+        q = ProjectedImages[:, i].reshape(1, -1)
+        twoPoints = np.vstack((ProjectedTestImage.T, q))
+        temp = pairwise_distances(twoPoints, metric='euclidean')[1, 0]
         Euc_dist.append(temp)
-    Euc_dist_min = min(Euc_dist)
-    Recognized_index = np.argmin(Euc_dist)
-    OutputName = str(Recognized_index) + '.jpg'
-    return OutputName
-
+    out_idx = np.argmin(np.array(Euc_dist)) + 1
+    return out_idx
